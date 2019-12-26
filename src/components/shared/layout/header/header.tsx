@@ -6,9 +6,9 @@ interface IHeader {
 }
 const Header = (props: IHeader) =>
             <header className={HEADER_CONTAINER}>
-                <p className={HEADER_TEXT}>
+                <h1 className={HEADER_TEXT}>
                     {props.title}
-                </p>
+                </h1>
             </header>;
 
 

@@ -1,7 +1,7 @@
 /* LAYOUT */
 export const APP_CONTAINER = "m-auto antialiased font-sans font-serif font-mono text-center";
 export const HEADER_CONTAINER = "bg-blue-500 w-full flex flex-col sticky top-0 pt-12";
-export const HEADER_TEXT="text-4xl text-center text-orange-500 font-bold text-lg";
+export const HEADER_TEXT="text-center text-orange-500 font-bold";
 
 /* INPUT */
 export const BODY_CONTENT ="bg-orange-500 min-h-screen flex flex-col items-center justify-center text-white text-2xl";
