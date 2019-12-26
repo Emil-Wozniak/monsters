@@ -9,6 +9,39 @@ interface IMonsterWrapper {
     monsters: IMonster[]
 }
 
+const MonsterStatus = (props: any) =>
+    <div className={CARD_BODY}>
+        <span className={props.address.geo.lat > 0 ? alive : dead}>
+            {props.address.geo.lat}
+        </span>
+        <span className={props.address.geo.lng > 0 ? alive : dead}>
+            {props.address.geo.lng}
+        </span>
+    </div>;
+
+const MonsterName = (props: any) =>
+    <div className={CARD_BODY}>
+        <p className="text-gray-700 text-base">{props.name}</p>
+    </div>;
+
+const MonsterImage = (props: any) =>
+    <div className={CARD_BODY}>
+        <img className="w-full"
+             src={`https://robohash.org/${props.id}?set=set2&size=180x180`}
+             alt="Sunset in the mountains"/>
+    </div>;
+
+const Monster = (props: IMonster) =>
+    <div className={CELL}>
+        <button
+            className={CARD}
+            style={{height: '24rem'}}>
+            <MonsterImage id={props.id}/>
+            <MonsterName name={props.name}/>
+            <MonsterStatus address={props.address}/>
+        </button>
+    </div>;
+
 export const MonsterWrapper = (props: IMonsterWrapper) =>
     <div className="flex flex-wrap m-4 content-center">
         {props.monsters
@@ -20,27 +53,3 @@ export const MonsterWrapper = (props: IMonsterWrapper) =>
                     name={monster.name}/>)}
     </div>;
 
-export const Monster = (props: IMonster) =>
-    <div className={CELL}>
-        <button className={CARD}
-                style={{height: '24rem'}}>
-            <div className={CARD_BODY}>
-                <img className="w-full"
-                     src={`https://robohash.org/${props.id}?set=set2&size=180x180`}
-                     alt="Sunset in the mountains"/>
-            </div>
-            <div className={CARD_BODY}>
-                <p className="text-gray-700 text-base">{props.name}</p>
-            </div>
-            <div className={CARD_BODY}>
-                <span
-                    className={props.address.geo.lat > 0 ? alive : dead}>
-                {props.address.geo.lat}
-                </span>
-                <span
-                    className={props.address.geo.lng > 0 ? alive : dead}>
-                {props.address.geo.lng}
-                </span>
-            </div>
-        </button>
-    </div>;
