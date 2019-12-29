@@ -1,9 +1,9 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
 import MonsterContainer from "./components/entities/monster.container";
-import {APP_CONTAINER, BODY_CONTENT} from "./config/StyleConstants";
 import Header from "./components/shared/layout/header/header";
 import Footer from "./components/shared/layout/footer/footer";
+import {APP_CONTAINER, BODY_CONTENT} from "./components/shared/layout/style/StyleConstants";
 
 const App: React.FC = () => {
     return (

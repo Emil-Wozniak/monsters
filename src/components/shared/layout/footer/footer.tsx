@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {ColumnElement, ColumnSection} from "../grid/grid.components";
 import {BLUE_LIST, DARK_GREEN_LIST, LIGHT_GREEN_LIST, ORANGE_LIST} from "../../../../config/StyleConstants";
 

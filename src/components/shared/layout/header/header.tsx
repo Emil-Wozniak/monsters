@@ -1,5 +1,5 @@
-import React from 'react';
-import {HEADER_CONTAINER, HEADER_TEXT} from "../../../../config/StyleConstants";
+import React from "react";
+import {HEADER_CONTAINER, HEADER_TEXT} from "../style/StyleConstants";
 
 interface IHeader {
     title: string;
