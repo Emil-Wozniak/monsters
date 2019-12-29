@@ -8,7 +8,7 @@ interface IFooter {
 
 const Footer = (props: IFooter) =>
     <footer>
-        <div className="container p-4">
+        <div className="container p-6">
             <div className="flex mb-4">
                 <ColumnSection
                     name={"Orange"}
